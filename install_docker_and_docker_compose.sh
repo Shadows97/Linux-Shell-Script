@@ -10,7 +10,7 @@ echo "----------------- Step 2 – Set up the repository -----------------"
 
 sudo apt-get update
 
-sudo apt-get install \
+sudo apt-get install -y \
     ca-certificates \
     curl \
     gnupg \
@@ -30,7 +30,15 @@ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+echo "----------------- Step 4 – Install Docker Compose -----------------"
+
+curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+chmod +x /usr/local/bin/docker-compose
+
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 
 
