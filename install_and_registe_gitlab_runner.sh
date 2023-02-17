@@ -7,3 +7,7 @@ curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/s
 echo "----------------- Step 2 – Install the latest version of GitLab Runner -----------------"
 
 sudo apt-get install gitlab-runner
+
+echo "----------------- Step 3 – Registe Runner -----------------"
+
+sudo gitlab-runner register

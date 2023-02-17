@@ -40,5 +40,10 @@ chmod +x /usr/local/bin/docker-compose
 
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
+echo "----------------- Step 5 – Manage Docker as a non-root user -----------------"
+
+sudo usermod -aG docker gitlab-runner
+
+sudo service docker restart
 
 
