@@ -14,7 +14,7 @@ MYSQL_PASSWORD="mysecretpassword"
 
 # Variables pour les backups
 BACKUP_DIR="/path/to/backup/directory"
-DATE=$(date +"%Y-%m-%d")
+DATE=$(date +"%Y-%m-%d-%H-%M-%S")
 
 # Backup PostgreSQL
 POSTGRES_BACKUP_FILENAME="${POSTGRES_DB_NAME}_${DATE}.sql"
